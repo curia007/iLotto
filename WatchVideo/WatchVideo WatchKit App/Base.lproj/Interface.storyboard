@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchVideo_WatchKit_Extension">
+                    <items>
+                        <imageView alignment="left" id="mvD-gZ-c7b"/>
+                    </items>
+                    <connections>
+                        <outlet property="imageInterface" destination="mvD-gZ-c7b" id="wrt-fe-e6H"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="Rn5-oa-2hA">
+            <objects>
+                <glanceController id="Q8M-rl-KV6" customClass="GlanceInterfaceController" customModule="WatchVideo_WatchKit_Extension">
+                    <items>
+                        <group alignment="left" layout="vertical" id="Ipa-Xe-fxX">
+                            <items>
+                                <label width="122" alignment="left" text="James Bond" id="vNl-Ix-MUb"/>
+                                <label alignment="left" text="007" textAlignment="center" id="wjs-k1-x3J"/>
+                            </items>
+                            <color key="backgroundColor" red="1" green="0.74401648350000005" blue="0.46994073730000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group alignment="left" id="XNK-sd-JXq">
+                            <items>
+                                <imageView width="136" height="100" alignment="left" image="vlcsnap-00066" id="ImP-vX-A1O"/>
+                            </items>
+                        </group>
+                    </items>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="228" y="853"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchVideo_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
